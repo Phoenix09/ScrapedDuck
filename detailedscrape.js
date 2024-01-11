@@ -5,6 +5,7 @@ const breakthrough = require('./pages/detailed/breakthrough')
 const spotlight = require('./pages/detailed/spotlight')
 const communityday = require('./pages/detailed/communityday')
 const raidbattles = require('./pages/detailed/raidbattles')
+const general = require('./pages/detailed/general')
 
 function main()
 {
@@ -39,6 +40,10 @@ function main()
                     else if (e.eventType == "raid-battles")
                     {
                         raidbattles.get(e.link, e.eventID, bkp);
+                    }
+                    else if (e.eventType == "event")
+                    {
+                        general.get(e.link, e.eventID, bkp);
                     }
                 });
             }

@@ -33,6 +33,9 @@ function main()
                     {
                         e.extraData = { raidbattles: data.data }
                     }
+                    else if (data.type == "event") {
+                        e.extraData = { event: data.data }
+                    }
                 }
             });
         });
