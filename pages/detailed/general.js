@@ -38,6 +38,7 @@ function get(url, id, bkp)
                         var temp = {};
                         temp.name = s.querySelector(":scope > .pkmn-name").innerHTML;
                         temp.image = s.querySelector(":scope > .pkmn-list-img > img").src;
+                        temp.canBeShiny = s.querySelector(":scope > .shiny-icon") != null;
                         ev.spawns.push(temp);
                     });
                 }
